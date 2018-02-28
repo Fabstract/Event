@@ -6,18 +6,19 @@ interface EventEmitterInterface
 {
     /**
      * @param EventInterface $event
+     * @return $this
      */
-    function emit($event);
+    public function emit($event);
 
     /**
-     * @param string $event_class_name
      * @param ListenerInterface|string $listener
+     * @return $this
      */
-    function addListener($event_class_name, $listener);
+    public function addListener($listener);
 
     /**
-     * @param string $event_class_name
      * @param ListenerInterface|string $listener
+     * @return $this
      */
-    function removeListener($event_class_name, $listener);
+    public function removeListener($listener);
 }

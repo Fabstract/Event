@@ -8,5 +8,10 @@ interface ListenerInterface
      * @param $event
      * @return void
      */
-    function onEvent($event);
+    public function onEvent($event);
+
+    /**
+     * @return string
+     */
+    public function getChannel();
 }
