@@ -103,7 +103,7 @@ class EventEmitter implements EventEmitterInterface
                 $priority_1 = $listener_1->getPriority();
             }
             if ($listener_2 instanceof PriorityAwareListenerInterface) {
-                $priority_2 = $listener_1->getPriority();
+                $priority_2 = $listener_2->getPriority();
             }
 
             if (is_infinite($priority_1) && is_infinite($priority_2)) {
