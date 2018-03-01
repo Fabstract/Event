@@ -2,8 +2,6 @@
 
 namespace Fabs\Component\Event;
 
-use Fabs\Component\Assert\Assert;
-
 class SimpleEvent extends Event
 {
     /** @var string */

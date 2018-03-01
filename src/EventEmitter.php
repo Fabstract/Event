@@ -2,8 +2,6 @@
 
 namespace Fabs\Component\Event;
 
-use Fabs\Component\Assert\Assert;
-
 class EventEmitter implements EventEmitterInterface
 {
     /**
