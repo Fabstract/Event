@@ -15,7 +15,7 @@ class SimpleEvent extends Event
      */
     public function setChannel($channel)
     {
-        Assert::assertNonEmptyString($channel, false, 'channel');
+        Assert::isNotEmptyString($channel, false, 'channel');
         $this->channel = $channel;
         return $this;
     }

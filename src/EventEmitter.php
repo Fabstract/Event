@@ -17,7 +17,7 @@ class EventEmitter implements EventEmitterInterface
      */
     public function emit($event)
     {
-        Assert::assertType($event, EventInterface::class, 'event');
+        Assert::isType($event, EventInterface::class, 'event');
 
         foreach ($this->getListeners($event) as $listener) {
             $listener->onEvent($event);
@@ -33,11 +33,11 @@ class EventEmitter implements EventEmitterInterface
     public function addListener($listener)
     {
         if (is_string($listener)) {
-            Assert::assertClassExists($listener);
+            Assert::isClassExists($listener);
             $listener = new $listener;
         }
 
-        Assert::assertType($listener, ListenerInterface::class, 'listener');
+        Assert::isType($listener, ListenerInterface::class, 'listener');
 
         $channel = $listener->getChannel();
 
@@ -52,7 +52,7 @@ class EventEmitter implements EventEmitterInterface
     public function removeListener($listener)
     {
         if (!is_string($listener)) {
-            Assert::assertType($listener, ListenerInterface::class, 'listener');
+            Assert::isType($listener, ListenerInterface::class, 'listener');
             $listener = get_class($listener);
         }
 
@@ -73,7 +73,7 @@ class EventEmitter implements EventEmitterInterface
      */
     protected function getListeners($event)
     {
-        Assert::assertNonEmptyString($event->getChannel(), false, 'event.channel');
+        Assert::isNotEmptyString($event->getChannel(), false, 'event.channel');
         return $this->getListenersByChannel($event->getChannel());
     }
 
