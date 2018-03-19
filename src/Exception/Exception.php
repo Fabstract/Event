@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Fabs\Component\Event\Exception;
+namespace Fabstract\Component\Event\Exception;
 
 
 class Exception extends \Exception

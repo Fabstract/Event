@@ -1,12 +1,10 @@
 <?php
 
+namespace Fabstract\Component\Event;
 
-namespace Fabs\Component\Event;
+use Fabstract\Component\Event\Exception\TypeConflictException;
 
-
-use Fabs\Component\Event\Exception\TypeConflictException;
-
-class Assert extends \Fabs\Component\Assert\Assert
+class Assert extends \Fabstract\Component\Assert\Assert
 {
 
     protected static function generateException($name, $expected, $given)

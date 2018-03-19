@@ -16,7 +16,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Fabs\\Component\\Event\\": "src"
+      "Fabstract\\Component\\Event\\": "src"
     }
   },
   "require": {

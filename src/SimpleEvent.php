@@ -1,6 +1,6 @@
 <?php
 
-namespace Fabs\Component\Event;
+namespace Fabstract\Component\Event;
 
 class SimpleEvent extends Event
 {
